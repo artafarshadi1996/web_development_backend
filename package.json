@@ -1,0 +1,21 @@
+{
+  "name": "api_repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://arta2@api.thetheartafarshadi.com/plesk-git/api_repo"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "multer": "^1.4.2",
+    "mysql": "^2.18.1",
+    "sqlserver": "0.0.2-security"
+  }
+}
