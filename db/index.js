@@ -22,16 +22,14 @@ const mysql = require ('mysql');
 
 let chirprdb = {};
 chirprdb.all = () => {
-return new Promise ((resolve, reject) =>
- { pool.query(`SELECT * FROM Question `, (err,results) =>{
-   if(err){
-     return reject(err);
-   }
-   return resolve(results);
-
-   });
- });
-
+  return new Promise ((resolve, reject) => {
+    pool.query(`SELECT * FROM Question `, (err,results) =>{
+      if(err){
+        return reject(err);
+      }
+      return resolve(results);
+    });
+  });
 };
 
 module.exports = chirprdb;

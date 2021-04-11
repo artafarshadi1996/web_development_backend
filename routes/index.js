@@ -1,4 +1,8 @@
 
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
+
+
 const express =require('express');
 const db =require('../db');
 const router = express.Router();
@@ -21,4 +25,7 @@ router.post('/',(request,response) => {
     //To access POST variable use req.body()methods.
     response.send(request.body);
 });
+
+router.use('/documentation.html', swaggerUi.serve);
+router.get('/documentation.html', swaggerUi.setup(swaggerDocument));
 module.exports = router;
