@@ -14,7 +14,7 @@
     }
   },
   "host": "api.thetheartafarshadi.com",
-  "basePath": "COMP351/API/V1",
+  "basePath": "/COMP351/API/V1",
   "tags": [
     {
       "name": "employees",
