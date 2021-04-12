@@ -25,11 +25,11 @@ router.post('/',(request,response) => {
     response.send(request.body);
 });
 
-router.get('/employees/:employeeId/', (req,res,next)=> {
+router.get('/employees/:employeeId/', async (req,res,next)=> {
   console.log('employeeId', req.params.employeeId);  // gives :uid
    
   try {
-    let results = db.getEmployeeId(req.params.employeeId);
+    let results = await db.getEmployeeId(req.params.employeeId);
     res.json(results);
   } catch(e) {
     console.log(e);

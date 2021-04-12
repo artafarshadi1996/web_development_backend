@@ -1,9 +1,9 @@
 const mysql = require ('mysql');
 
  const pool = mysql.createPool({
-   connectionLimit: 10,
+   connectionLimit: 50,
    password: 'Fa123123@',
-  user: 'Arta3',
+   user: 'Arta3',
    database: "admin_",
 	 host: "localhost",
    port: "3306"
@@ -24,7 +24,7 @@ let chirprdb = {};
 
 chirprdb.all = () => {
   return new Promise ((resolve, reject) => {
-    pool.query(`SELECT * FROM Question `, (err,results) =>{
+    pool.query(`SELECT * FROM Question`, (err,results) =>{
       if(err){
         return reject(err);
       }
