@@ -27,7 +27,7 @@ chirprdb.getEmployeeId = (id) => {
 
   
   return new Promise ((resolve, reject) => {
-    pool.query(`SELECT * FROM Employees where id=? `, id, (err,results) =>{
+    pool.query(`SELECT id, Names as "name" FROM Employees where id=? `, id, (err,results) =>{
       if(err){
         return reject(err);
       }
